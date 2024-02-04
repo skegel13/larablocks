@@ -1,19 +1,8 @@
-# A simple package for creating Laravel modules compatible with the Laravel IDEA plugin
+# Larablocks
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/skegel13/larablocks.svg?style=flat-square)](https://packagist.org/packages/skegel13/larablocks)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/skegel13/larablocks/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/skegel13/larablocks/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/skegel13/larablocks/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/skegel13/larablocks/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/skegel13/larablocks.svg?style=flat-square)](https://packagist.org/packages/skegel13/larablocks)
+A simple package for creating Laravel modules compatible with the Laravel IDEA plugin
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/larablocks.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/larablocks)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This package was inspired by the [Modular Laravel](https://laracasts.com/series/modular-laravel) series by [Mateus Guimarães](https://mateusguimaraes.com/) on [Laracasts](https://laracasts.com/referral/skegel13).
 
 ## Installation
 
@@ -23,44 +12,27 @@ You can install the package via composer:
 composer require skegel13/larablocks
 ```
 
-You can publish and run the migrations with:
+You can publish the stubs with:
 
 ```bash
-php artisan vendor:publish --tag="larablocks-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="larablocks-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="larablocks-views"
+php artisan vendor:publish --tag="larablocks-stubs"
 ```
 
 ## Usage
 
-```php
-$larablocks = new Skegel13\Larablocks();
-echo $larablocks->echoPhrase('Hello, Skegel13!');
-```
-
-## Testing
+Create a block with:
 
 ```bash
-composer test
+# Create block
+php artisan make:block Blog
+
+# Delete block
+php artisan make:block Blog --delete
 ```
+
+If you are using the Laravel IDEA plugin, update your module settings to use "Directory modules".
+
+Then, set the "Sources path" to "src" and the "Root directory path" to "Modules".
 
 ## Changelog
 
@@ -69,10 +41,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## Credits
 

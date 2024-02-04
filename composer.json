@@ -70,10 +70,7 @@
         "laravel": {
             "providers": [
                 "Skegel13\\Larablocks\\LarablocksServiceProvider"
-            ],
-            "aliases": {
-                "Larablocks": "Skegel13\\Larablocks\\Facades\\Larablocks"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
