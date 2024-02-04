@@ -34,6 +34,8 @@ If you are using the Laravel IDEA plugin, update your module settings to use "Di
 
 Then, set the "Sources path" to "src" and the "Root directory path" to "Modules".
 
+![CleanShot 2024-02-03 at 23 06 59@2x](https://github.com/skegel13/larablocks/assets/1765058/583f7420-f761-4f50-bb16-dafb629fb7dc)
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
